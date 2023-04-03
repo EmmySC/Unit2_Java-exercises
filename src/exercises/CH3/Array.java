@@ -27,7 +27,7 @@ public class Array {
 
     } //workingWithNumbers end curly bracket
 
-    public void splitTheString() {
+    public String[] splitTheString() {  //changed from void to String[], to return theSplitStrings
         String stringToSplit = "I would not, could not, in a box. I would not, could not with a fox. " +
                 "I will not eat them in a house. I will not eat them with a mouse.";
 
@@ -37,7 +37,9 @@ public class Array {
         String[] theSplitStrings = stringToSplit.split(" "); //parameter(split at each whitespace in the string)
 
         //Print the array of words to verify the code works, syntax is: System.out.println(Array.toString(arrayName));
-        System.out.println(Arrays.toString(theSplitStrings));
+        System.out.println(Arrays.toString(theSplitStrings));    // **undo comment-out to run in Array.java**
+
+        return theSplitStrings;
 
     } //splitTheString end curly bracket
 
