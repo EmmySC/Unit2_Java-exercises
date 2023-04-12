@@ -1,5 +1,7 @@
 package org.launchcode.java.demos.lsn5unittesting.main;
 
+import java.lang.IllegalAccessException;
+
 public class Car {
 
     private String make;
@@ -46,7 +48,10 @@ public class Car {
         return gasTankLevel;
     }
 
-    public void setGasTankLevel(double gasTankLevel) {
+    public void setGasTankLevel(double gasTankLevel) {   //throws IllegalAccessException//***
+        if (gasTankLevel > this.getGasTankSize()) {
+            throw new IllegalAccessException("Cannot exceed tank size!");
+        }
         this.gasTankLevel = gasTankLevel;
     }
 
@@ -84,5 +89,10 @@ public class Car {
         this.gasTankLevel = this.gasTankLevel - gallonsUsed;
         this.odometer += milesAbleToTravel;
     }
+
+    public void addGas(double gas) {
+        this.setGasTankLevel(gas + this.getGasTankLevel());
+    }
+
 
 }

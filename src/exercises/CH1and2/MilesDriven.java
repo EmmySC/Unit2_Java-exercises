@@ -1,4 +1,4 @@
-package exercises;
+package exercises.CH1and2;
 import java.util.Scanner;
 
 public class MilesDriven {
