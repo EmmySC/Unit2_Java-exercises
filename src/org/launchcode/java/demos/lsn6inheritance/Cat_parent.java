@@ -1,6 +1,6 @@
 package org.launchcode.java.demos.lsn6inheritance;
 
-public class Cat {
+public class Cat_parent {
 
     private boolean tired = false;
     private boolean hungry = false;
@@ -9,8 +9,12 @@ public class Cat {
     // The biological family for all cat species
     private String family = "Felidae";
 
-    public Cat (double aWeight) {
+    public Cat_parent(double aWeight) {  //constructor
         weight = aWeight;
+    }
+
+    public Cat_parent() {  //constructor
+        weight = 13;
     }
 
     /**** Getters and Setters ****/
@@ -41,7 +45,7 @@ public class Cat {
 
     public String getFamily() {
         return family;
-    }
+    }  //makes private string field family readable to HouseCat_child
 
     /**** Instance Methods ****/
 
@@ -58,7 +62,6 @@ public class Cat {
         if (!hungry) {
             tired = true;
         }
-
         hungry = false;
     }
 
